@@ -80,7 +80,7 @@ function closeDetails() {
 window.onhashchange = locationHashChanged;
 
 function locationHashChanged() {
-  if(window.location.hash == '') {
+  if(window.location.hash == '' || window.location.hash == 'work' || window.location.hash == 'about') {
     closeDetails();
   }
 }
