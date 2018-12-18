@@ -1,0 +1,133 @@
+[
+  {
+  	"name": "NewsOK",
+  	"description": "I've been an interactive designer and front-end developer with <a href=\"https://newsok.com\" target=\"_blank\" rel=\"external\">NewsOK</a> and <a href=\"https://www.oklahoman.com\" target=\"_blank\" rel=\"external\">The Oklahoman</a> since 2009. Alongside some brilliant folks, I've spent the better part of a decade innovating ways to deliver the news to millions of readers.",
+    "tags": [
+      "UI",
+      "UX",
+      "Branding"
+    ],
+    "coverImg": "img/newsok/cover_img.png",
+  	"imgs": [{
+  			"url": "img/newsok/website.png",
+        "caption": "We launched a ground-up rebuild of the site in mid-2018, moving from our old two-site strategy to a modern, fully-responsive site. I was tasked with prototyping various layouts that would support our full range of content and advertising across a spectrum of devices, and ultimately translating the final designs into efficient, readable code for our team to work with."
+  		},
+      {
+        "url": "img/newsok/bigscreen.png",
+        "caption": "There's a massive bigscreen that wraps around the soutwest corner of our office in downtown Oklahoma City. Rather than use the limited out-of-the box sofware to manage it, we opted to tap into our in-house CMS to drive the screen. I was able to contribute some slide designs as well extend the code that our team wrote to implement the slides."
+      },
+      {
+        "url": "img/newsok/bigscreen_slide1.png",
+        "caption": "We used Google's Calendar API to access the video studio's daily schedule, and built a slide that cycle's through the day's events."
+      },
+      {
+        "url": "img/newsok/bigscreen_slide4.png"
+      },
+      {
+        "url": "img/newsok/bigscreen_slide5.png"
+      },
+      {
+        "url": "img/newsok/bigscreen_page.png",
+        "caption": "Tapping into the same data the drives the screen, I designed and implemented a fun little companion page on our site where you could see all of the content being featured."
+      },
+      {
+        "url": "img/newsok/video.png",
+        "caption": "The NewsOK video team produces a substantial number of videos weekly. We utilized the YouTube to API present this content in a smart, cohesive manner on our site. You can watch certain videos live as they're happening, or access the full library on demand."
+      }
+  	]
+  },
+  {
+  	"name": "The Well Church",
+  	"description": "The Well Church is based in Mustang, OK. I was approached in 2015 by pastor Stephen Myers to walk through their vision of planting a church, and to explore this new church's identity. We honed in on a foundational logo and color palette that would enable this young church to grow and develop with a cohesive identity in place from the beginning.",
+    "tags": [
+      "Branding"
+    ],
+    "coverImg": "img/the_well/cover_img.png",
+  	"imgs": [{
+  			"url": "img/the_well/logo_alt.png"
+  		},
+  		{
+        "url": "img/the_well/cards.png"
+  		},
+  		{
+        "url": "img/the_well/the_well_logos.png",
+        "caption": "Various alternate treatments for different use cases."
+  		},
+  		{
+        "url": "img/the_well/primary_logo.png"
+  		}
+  	]
+  },
+  {
+    "name": "Logos",
+    "description": "",
+    "tags": [
+      "Branding"
+    ],
+    "coverImg": "img/logos/cover_img.png",
+    "imgs": [
+      {
+        "url": "img/logos/sooner_technology.jpg"
+  		},
+      {
+        "url": "img/logos/thegathering1.png"
+  		},
+  		{
+        "url": "img/logos/pinddeals_logo.png"
+  		},
+      {
+        "url": "img/logos/gravelveins.png"
+  		},
+      {
+        "url": "img/logos/midwest.png"
+  		},
+      {
+        "url": "img/logos/dust.png"
+  		}
+  	]
+  },
+  {
+    "name": "Misc.",
+    "description": "",
+    "tags": ["Illustration", "Screenprinting", "UI"],
+    "coverImg": "img/misc/cover_img.jpg",
+    "imgs": [
+      {
+        "url": "img/misc/versa.png"
+  		},
+      {
+        "url": "img/misc/deck1.jpg"
+  		},
+  		{
+        "url": "img/misc/ghost.png"
+  		},
+      {
+        "url": "img/misc/tree.png"
+  		},
+      {
+        "url": "img/misc/scout_invite.png"
+  		},
+  		{
+        "url": "img/misc/scout_announcement.png"
+  		},
+      {
+        "url": "img/misc/liaa.png"
+  		},
+      {
+        "url": "img/misc/lifechurch.png"
+  		},
+      {
+        "url": "img/misc/blind.png"
+  		},
+      {
+        "url": "img/misc/ellie_invite.png"
+  		},
+      {
+        "url": "img/misc/ellie_invite2.png"
+  		},
+      {
+        "url": "img/misc/rfg.png"
+  		}
+  	]
+  }
+]

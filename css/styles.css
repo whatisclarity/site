@@ -1,0 +1,204 @@
+/* DEFAULTS */
+:root {
+  --red: #ef4e25;
+  --blue: #489fa2;
+  --dark: rgba(0,0,0,.85);
+  --light: white;
+  font-size: 18px;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--light);
+  color: var(--dark);
+  font-family: 'Domine', serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; }
+img.fluid { width: 100%; }
+
+/* TYPE */
+h1, h2, h3, h4, h5, h6, p { margin: 0 0 1rem; }
+.sans {
+  font-family: 'Fredoka One';
+  font-weight: normal;
+}
+.text-jumbo { font-size: 4rem; letter-spacing: -2px;}
+.text-big { font-size: 3rem; }
+.text-small { font-size: .8rem; }
+.lh-1 { line-height: 1; }
+
+/* COLORS */
+.text-dark { color: var(--dark) !important; }
+.text-light { color: var(--light) !important; }
+.text-primary { color: var(--red) !important; }
+.text-alt { color: var(--blue) !important; }
+
+.bg-dark { background-color: var(--dark) !important; }
+.bg-light { background-color: var(--light) !important; }
+.bg-primary { background-color: var(--red) !important; }
+.bg-alt { background-color: var(--blue) !important; }
+
+/* LINKS */
+a {
+  color: var(--light);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  text-decoration: none;
+}
+.bg-light a { color: var(--red); }
+
+/* UTILS */
+.sticky {
+  position: sticky;
+  top: 2rem;
+}
+.pad { padding: 2rem; }
+.trans { opacity: .6; }
+
+/* HOME */
+#howdy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.nav a { margin-right: 2rem; }
+
+/* ANIMATIONS */
+.bounce span {
+  animation: bounce .3s ease-out;
+  display: inline-block;
+  transform-origin: bottom center;
+}
+.bounce span:nth-child(1) { animation-delay: .5s; }
+.bounce span:nth-child(2) { animation-delay: .6s; }
+.bounce span:nth-child(3) { animation-delay: .7s; }
+.bounce span:nth-child(4) { animation-delay: .8s; }
+.bounce span:nth-child(5) { animation-delay: .9s; }
+.bounce span:nth-child(6) { animation-delay:  1s; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px) rotate(0); }
+  50%      { transform: translateY(-20px) rotate(-5deg); }
+}
+
+/* WORK */
+#work {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.tile { overflow: hidden;}
+.tile a.inner {
+  transform: scale(1.01);
+  transition: .15s transform ease-out;
+}
+.tile a.inner:hover { transform: scale(1.05); }
+.tile .thumb,
+.cover {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.close-btn {
+  border: none;
+  font-size: 4rem;
+  line-height: 2rem;
+    margin: 1rem 0;
+  padding: 1rem;
+  position: fixed;
+  right: -200px;
+  top: 0;
+  text-align: center;
+  transition: right .25s ease-out;
+  user-select: none;
+  z-index: 20;
+}
+
+/* DETAIL */
+#detail {
+  background: rgba(0,0,0,.6);
+  bottom: auto;
+  left: 0;
+  min-height: 100vh;
+  padding: 0 1rem;
+  position: fixed;
+  right: 0;
+  top: 100%;
+  transition: .15s ease-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 10;
+}
+#detail .inner {
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1200px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+#detail p,
+#detail figcaption { font-size: .8rem; }
+#detail figure { margin: 0;}
+#detail .roles { margin-bottom: 1rem ;}
+body.show-detail {
+  overflow: hidden;
+  position: relative;
+}
+body.show-detail #detail {
+  top: 0;
+  bottom: 0;
+  visibility: visible;
+}
+body.show-detail .close-btn { right: 0; }
+
+/* ABOUT */
+#about {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+}
+
+/* Let's get wide */
+@media (min-width: 800px) {
+  /* HOME */
+  #howdy {
+    padding-right: 40%;
+    min-height: calc(100vh - 2rem);
+  }
+
+  /* WORK */
+  #work { grid-template-columns: repeat(3, 1fr); }
+  .tile {
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+  }
+  .tile .inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tile:nth-child(5n+1) {
+    grid-column: span 2;
+    padding-top: 50%;
+  }
+
+  /* DETAIL */
+  #detail p,
+  #detail figcaption { font-size: 1rem; }
+
+  /* ABOUT */
+
+}
+
+/* @media (min-width: 1420px) {
+  .close-btn { background: none !important; }
+} */
