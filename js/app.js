@@ -29,7 +29,7 @@ function renderGrid(items) {
     const el  = document.createElement('div');
     const url = items[i].name.replace(/\s+/g, '-').toLowerCase();
     el.className += 'tile';
-    el.innerHTML = `<a href="#` + url + `" class="inner" onClick="showDetails(` + i + `)"><img src="` + items[i].coverImg + `" alt="` + items[i].name + `" class="thumb" /></a>`;
+    el.innerHTML = `<a href="#/` + url + `" class="inner" onClick="showDetails(` + i + `)"><img src="` + items[i].coverImg + `" alt="` + items[i].name + `" class="thumb" /></a>`;
     work.appendChild(el);
   }
 }
@@ -73,33 +73,56 @@ function showDetails(i) {
 // Close details
 function closeDetails() {
   document.body.className -= ' show-detail';
-  history.pushState(null, null, '#');
+  history.pushState(null, null, '#/');
 }
 
 // Navigation stuff
 window.onhashchange = locationHashChanged;
 
 function locationHashChanged() {
-  if(window.location.hash == '' || window.location.hash == 'work' || window.location.hash == 'about') {
+  if (window.location.hash == '' || window.location.hash == '#work' || window.location.hash == '#about') {
     closeDetails();
   }
 }
 
+// ESC key
 window.addEventListener('keydown', function (event) {
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }
-
   switch (event.key) {
-    case "Esc": // IE/Edge specific value
+    case "Esc":
     case "Escape":
-      // Do something for "esc" key press.
       closeDetails();
       break;
     default:
-      return; // Quit when this doesn't handle the key event.
+      return;
   }
-
-  // Cancel the default action to avoid it being handled twice
-  event.preventDefault();
+  event.preventDefault(); // Cancel the default action to avoid it being handled twice
 }, true);
+
+
+// Handle hash routing onload
+window.addEventListener('load', checkHash);
+
+function checkHash(){
+  if (window.location.hash) {
+    let hash = window.location.hash.replace('#/', '');
+    i = arraySearch(data, hash);
+    console.log(i, hash);
+    if (i !== false) {
+      showDetails(i);
+    }
+  }
+  return false;
+}
+
+function arraySearch(arr, val) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].name.replace(/\s+/g, '-').toLowerCase() === val) {
+      console.log('We have a match!', arr[i].name, val);
+      return i;
+    }
+  }
+  return false;
+}
