@@ -29,7 +29,7 @@ function renderGrid(items) {
     const el  = document.createElement('div');
     const url = items[i].name.replace(/\s+/g, '-').toLowerCase();
     el.className += 'tile';
-    el.innerHTML = `<a href="#/` + url + `" class="inner" onClick="showDetails(` + i + `)"><img src="` + items[i].coverImg + `" alt="` + items[i].name + `" class="thumb" /></a>`;
+    el.innerHTML = `<a href="#` + url + `" class="inner" onClick="showDetails(` + i + `)"><img src="` + items[i].coverImg + `" alt="` + items[i].name + `" class="thumb" /></a>`;
     work.appendChild(el);
   }
 }
@@ -73,7 +73,7 @@ function showDetails(i) {
 // Close details
 function closeDetails() {
   document.body.className -= ' show-detail';
-  history.pushState(null, null, '#/');
+  history.pushState(null, null, '#');
 }
 
 // Navigation stuff
@@ -107,7 +107,7 @@ window.addEventListener('load', checkHash);
 
 function checkHash(){
   if (window.location.hash) {
-    let hash = window.location.hash.replace('#/', '');
+    let hash = window.location.hash.replace('#', '');
     i = arraySearch(data, hash);
     console.log(i, hash);
     if (i !== false) {
