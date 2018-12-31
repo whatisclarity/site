@@ -29,7 +29,9 @@ function renderGrid(items) {
     const el  = document.createElement('div');
     const url = items[i].name.replace(/\s+/g, '-').toLowerCase();
     el.className += 'tile';
-    el.innerHTML = `<a href="#` + url + `" class="inner" onClick="showDetails(` + i + `)"><img src="` + items[i].coverImg + `" alt="` + items[i].name + `" class="thumb" /></a>`;
+    el.innerHTML = `<a href="#` + url + `" class="inner" onClick="showDetails(` + i + `)">
+                      <img src="` + items[i].coverImg + `" alt="` + items[i].name + `" class="thumb">
+                    </a>`;
     work.appendChild(el);
   }
 }
@@ -40,10 +42,17 @@ function showDetails(i) {
 
   let imgs = '';
   for (var i = 0; i < item.imgs.length; i++) {
-    const src     = item.imgs[i].url;
-    const caption = item.imgs[i].caption;
-    imgs += `<figure><img src="` + src + `" alt="` + caption + `" class="fluid" />`;
-    if (caption) {
+    const src      = item.imgs[i].url;
+    const srcSplit = item.imgs[i].url.split('.');
+    const srcSmall = srcSplit[0] + '-sm.' + srcSplit[1];
+    console.log(srcSmall);
+    const caption = item.imgs[i].caption ? item.imgs[i].caption : '';
+    imgs += `<figure>
+              <picture>
+                <source media="(max-width: 750px)" srcset="` + srcSmall + `">
+                <img src="` + src + `" alt="` + caption + `" class="fluid">
+              </picture>`;
+    if (caption != '') {
       imgs += `<figcaption class="pad"><span class="text-primary sans">&#x25B4;</span> ` + caption + `</figcaption>`;
     }
     imgs += '</figure>';

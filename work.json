@@ -67,10 +67,7 @@
     "coverImg": "img/logos/cover_img.png",
     "imgs": [
       {
-        "url": "img/logos/sooner_technology.jpg"
-  		},
-      {
-        "url": "img/logos/thegathering1.png"
+        "url": "img/logos/thegathering1.jpg"
   		},
   		{
         "url": "img/logos/pinddeals_logo.png"
@@ -79,7 +76,13 @@
         "url": "img/logos/gravelveins.png"
   		},
       {
+        "url": "img/logos/sooner_technology.jpg"
+  		},
+      {
         "url": "img/logos/midwest.png"
+  		},
+      {
+        "url": "img/logos/s.png"
   		},
       {
         "url": "img/logos/dust.png"
