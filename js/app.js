@@ -77,8 +77,10 @@ function showDetails(i) {
   document.body.className += ' show-detail';
   detail.scrollTop = 0;
   setTimeout(function(){
-    ga('set', 'page', location.hash);
-    ga('send', 'pageview');
+    gtag('config', 'UA-131645267-1', {
+      'page_title' : 'Work: ' + item.name,
+      'page_path': '/'+location.hash
+    });
   }, 1000);
 }
 
@@ -86,7 +88,6 @@ function showDetails(i) {
 function closeDetails() {
   document.body.className -= ' show-detail';
   history.pushState(null, null, '#');
-  ga('set', 'page', '/');
 }
 
 // Navigation stuff
