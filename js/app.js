@@ -77,15 +77,16 @@ function showDetails(i) {
   document.body.className += ' show-detail';
   detail.scrollTop = 0;
   setTimeout(function(){
-    ga('send', 'pageview', location.hash);
-    console.log('send', 'pageview', location.hash);
-  }, 1500);
+    ga('set', 'page', location.hash);
+    ga('send', 'pageview');
+  }, 1000);
 }
 
 // Close details
 function closeDetails() {
   document.body.className -= ' show-detail';
   history.pushState(null, null, '#');
+  ga('set', 'page', '/');
 }
 
 // Navigation stuff
