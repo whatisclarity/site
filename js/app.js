@@ -12,14 +12,14 @@ request.onload = function (e) {
     if (request.status === 200) {
       data = request.response
       renderGrid(data);
-      console.log(request);
+      // console.log(request);
     } else {
-      console.error(request.statusText);
+      // console.error(request.statusText);
     }
   }
 };
 request.onerror = function (e) {
-  console.error(request.statusText);
+  // console.error(request.statusText);
 };
 request.send(null);
 
@@ -45,8 +45,7 @@ function showDetails(i) {
     const src      = item.imgs[i].url;
     const srcSplit = item.imgs[i].url.split('.');
     const srcSmall = srcSplit[0] + '-sm.' + srcSplit[1];
-    console.log(srcSmall);
-    const caption = item.imgs[i].caption ? item.imgs[i].caption : '';
+    const caption  = item.imgs[i].caption ? item.imgs[i].caption : '';
     imgs += `<figure>
               <picture>
                 <source media="(max-width: 750px)" srcset="` + srcSmall + `">
@@ -77,6 +76,10 @@ function showDetails(i) {
 
   document.body.className += ' show-detail';
   detail.scrollTop = 0;
+  setTimeout(function(){
+    ga('send', 'pageview', location.hash);
+    console.log('send', 'pageview', location.hash);
+  }, 1500);
 }
 
 // Close details
@@ -118,7 +121,7 @@ function checkHash(){
   if (window.location.hash) {
     let hash = window.location.hash.replace('#', '');
     i = arraySearch(data, hash);
-    console.log(i, hash);
+    // console.log(i, hash);
     if (i !== false) {
       showDetails(i);
     }
@@ -129,7 +132,7 @@ function checkHash(){
 function arraySearch(arr, val) {
   for (var i = 0; i < arr.length; i++) {
     if (arr[i].name.replace(/\s+/g, '-').toLowerCase() === val) {
-      console.log('We have a match!', arr[i].name, val);
+      // console.log('We have a match!', arr[i].name, val);
       return i;
     }
   }
