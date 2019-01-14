@@ -14,7 +14,7 @@
   		},
       {
         "url": "img/newsok/bigscreen.png",
-        "caption": "There's a massive bigscreen that wraps around the soutwest corner of our office in downtown Oklahoma City. Rather than use the limited out-of-the box sofware to manage it, we opted to tap into our in-house CMS to drive the screen. I was able to contribute some slide designs as well extend the code that our team wrote to implement the slides."
+        "caption": "There's a massive bigscreen that wraps around the southwest corner of our office in downtown Oklahoma City. Rather than use the limited out-of-the box sofware to manage it, we opted to tap into our in-house CMS to drive the screen. I was able to contribute some slide designs as well extend the code that our team wrote to implement the slides."
       },
       {
         "url": "img/newsok/bigscreen_slide1.png",
@@ -32,13 +32,13 @@
       },
       {
         "url": "img/newsok/video.png",
-        "caption": "The NewsOK video team produces a substantial number of videos weekly. We utilized the YouTube to API present this content in a smart, cohesive manner on our site. You can watch certain videos live as they're happening, or access the full library on demand."
+        "caption": "The NewsOK video team produces a substantial number of videos weekly. We utilized the YouTube API to present this content in a smart, cohesive manner on our site. You can watch certain videos live as they're happening, or access the full library on demand."
       }
   	]
   },
   {
   	"name": "The Well Church",
-  	"description": "The Well Church is based in Mustang, OK. I was approached in 2015 by pastor Stephen Myers to walk through their vision of planting a church, and to explore this new church's identity. We honed in on a foundational logo and color palette that would enable this young church to grow and develop with a cohesive identity in place from the beginning.",
+  	"description": "The Well Church is based in Mustang, OK. I was approached in 2015 by Pastor Stephen Myers to walk through their vision of planting a church, and to explore this new church's identity. We honed in on a foundational logo and color palette that would enable this young church to grow and develop with a cohesive identity in place from the beginning.",
     "tags": [
       "Branding"
     ],
