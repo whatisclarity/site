@@ -180,7 +180,7 @@ body.show-detail .close-btn { right: 0; }
   /* HOME */
   #howdy {
     padding-right: 40%;
-    min-height: calc(100vh - 2rem);
+    /*min-height: calc(100vh - 2rem);*/
   }
 
   /* WORK */
